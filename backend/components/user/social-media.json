@@ -1,0 +1,24 @@
+{
+  "collectionName": "social_medias",
+  "info": {
+    "name": "Social Media",
+    "icon": "globe"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "enumeration",
+      "enum": [
+        "Facebook",
+        "Twitter",
+        "LinkedIn",
+        "Instagram",
+        "WhatsApp",
+        "Skype"
+      ]
+    },
+    "value": {
+      "type": "string"
+    }
+  }
+}

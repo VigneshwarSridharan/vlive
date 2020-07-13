@@ -1,0 +1,19 @@
+{
+  "collectionName": "phones",
+  "info": {
+    "name": "Phone",
+    "icon": "phone-alt"
+  },
+  "options": {},
+  "attributes": {
+    "phone": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

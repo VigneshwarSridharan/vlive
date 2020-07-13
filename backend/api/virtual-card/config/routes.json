@@ -1,0 +1,60 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/virtual-cards",
+      "handler": "virtual-card.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/virtual-cards/count",
+      "handler": "virtual-card.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/virtual-cards/:id",
+      "handler": "virtual-card.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/virtual-cards/slug/:slug",
+      "handler": "virtual-card.findSlug",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/virtual-cards",
+      "handler": "virtual-card.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/virtual-cards/:id",
+      "handler": "virtual-card.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/virtual-cards/:id",
+      "handler": "virtual-card.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "kind": "collectionType",
+  "collectionName": "virtual_cards",
+  "info": {
+    "name": "Virtual Card"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "middleName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "component",
+      "repeatable": true,
+      "component": "user.email"
+    },
+    "phone": {
+      "type": "component",
+      "repeatable": true,
+      "component": "user.phone"
+    },
+    "designation": {
+      "type": "string",
+      "required": false
+    },
+    "socialMedia": {
+      "type": "component",
+      "repeatable": true,
+      "component": "user.social-media"
+    },
+    "profile": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "cover": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "firstName"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "virtual_cards"
+    },
+    "theme": {
+      "model": "themes",
+      "via": "virtual_card"
+    }
+  }
+}

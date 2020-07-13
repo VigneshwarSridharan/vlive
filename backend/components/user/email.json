@@ -1,0 +1,19 @@
+{
+  "collectionName": "emails",
+  "info": {
+    "name": "Email",
+    "icon": "envelope"
+  },
+  "options": {},
+  "attributes": {
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
