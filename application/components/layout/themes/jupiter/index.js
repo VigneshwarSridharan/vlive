@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { useEffect, useState } from 'react';
 import { capitalCase } from 'change-case'
+import { API_BASE_URL } from '../../../../utils/Constants';
 
 const SocialMedia = ({ name, value }) => {
 
@@ -24,9 +25,9 @@ const JupiterTheme = props => {
 
     let { firstName, middleName, lastName, designation, email, phone, profile, socialMedia, cover } = props
 
-    const profileImage = profile && profile.url ? `http://localhost:1337${profile.url}` : "/static/themes/jupiter/images/profile.png";
+    const profileImage = profile && profile.url ? `${API_BASE_URL}${profile.url}` : "/static/themes/jupiter/images/profile.png";
 
-    const coverImage = cover && cover.url ? `http://localhost:1337${cover.url}` : "/static/themes/jupiter/images/bg.jpg";
+    const coverImage = cover && cover.url ? `${API_BASE_URL}${cover.url}` : "/static/themes/jupiter/images/bg.jpg";
     let [loaded, setLoaded] = useState(false)
 
     useEffect(() => {

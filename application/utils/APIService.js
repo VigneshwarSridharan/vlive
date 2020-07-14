@@ -1,15 +1,14 @@
 import http from 'axios';
-
-const API_URL = "http://localhost:1337"
+import { API_URL } from './Constants';
 
 
 const getConfig = () => {
     let config = {};
     let token = "";
 
-    // if('localStorage' in window) {
-    //     token = localStorage.getItem('token')
-    // }
+    if('localStorage' in window) {
+        token = localStorage.getItem('token')
+    }
 
     if (token) {
         config = {

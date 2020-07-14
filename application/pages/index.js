@@ -1,5 +1,3 @@
-import Link from 'next/link'
-import SiteLayout from '../components/layout/SiteLayout';
 
 const App = () => {
     return (

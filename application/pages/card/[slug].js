@@ -2,6 +2,7 @@ import { VirtualCardsService } from "../../utils/APIService"
 import Axios from "axios"
 import ClassicTheme from "../../components/layout/themes/classic"
 import JupiterTheme from "../../components/layout/themes/jupiter"
+import { API_URL } from "../../utils/Constants"
 
 
 const Card = (props) => {
@@ -27,7 +28,7 @@ const Card = (props) => {
 
 export async function getServerSideProps(context) {
     let { slug } = context.query
-    let result = await Axios.get(`http://localhost:1337/virtual-cards/slug/${slug}`)
+    let result = await Axios.get(`${API_URL}/virtual-cards/slug/${slug}`)
     result = result.data
     // console.log({result})
     return {

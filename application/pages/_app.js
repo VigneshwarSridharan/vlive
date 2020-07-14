@@ -13,7 +13,7 @@ class MyApp extends App {
         let token = localStorage.getItem('token')
         const { router } = this.props
         console.log({ token })
-        if (!token && !router.pathname.startsWith('/card')) {
+        if (!token && router.pathname.startsWith('/dashboard')) {
             router.replace('/login')
         }
         if(!router.pathname.startsWith('/card')) {
