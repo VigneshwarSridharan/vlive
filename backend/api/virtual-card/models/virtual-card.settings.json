@@ -67,8 +67,7 @@
       "via": "virtual_cards"
     },
     "theme": {
-      "model": "themes",
-      "via": "virtual_card"
+      "model": "themes"
     }
   }
 }

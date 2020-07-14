@@ -16,10 +16,6 @@
       "collection": "plans",
       "via": "themes",
       "dominant": true
-    },
-    "virtual_card": {
-      "via": "theme",
-      "model": "virtual-card"
     }
   }
 }

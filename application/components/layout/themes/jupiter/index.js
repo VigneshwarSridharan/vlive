@@ -125,8 +125,8 @@ const JupiterTheme = props => {
 
                                                     return (
                                                         <div className="row" key={inx}>
-                                                            <div className="col col-m-12 col-d-5"><b>{capitalCase(key)}</b></div>
-                                                            <div className="col col-m-12 col-d-7">{props[key]}</div>
+                                                            <div className="col col-m-6 col-d-5"><b>{capitalCase(key)}</b></div>
+                                                            <div className="col col-m-6 col-d-7">{props[key]}</div>
                                                         </div>
                                                     )
                                                 })
@@ -137,8 +137,8 @@ const JupiterTheme = props => {
 
                                                     return (
                                                         <div className="row" key={inx}>
-                                                            <div className="col col-m-12 col-d-5"><b>Phone Number {numberInfo(phone) && <span> ({inx + 1})</span>}</b></div>
-                                                            <div className="col col-m-12 col-d-7"><a href={`tel:${item.phone}`}>{item.phone}</a></div>
+                                                            <div className="col col-m-6 col-d-5"><b>Phone Number {numberInfo(phone) && <span> ({inx + 1})</span>}</b></div>
+                                                            <div className="col col-m-6 col-d-7"><a href={`tel:${item.phone}`}>{item.phone}</a></div>
                                                         </div>
                                                     )
                                                 })
@@ -149,8 +149,8 @@ const JupiterTheme = props => {
 
                                                     return (
                                                         <div className="row" key={inx}>
-                                                            <div className="col col-m-12 col-d-5"><b>Email Address {numberInfo(email) && <span> ({inx + 1})</span>}</b></div>
-                                                            <div className="col col-m-12 col-d-7"><a href={`tel:${item.email}`}>{item.email}</a></div>
+                                                            <div className="col col-m-6 col-d-5"><b>Email Address {numberInfo(email) && <span> ({inx + 1})</span>}</b></div>
+                                                            <div className="col col-m-6 col-d-7"><a href={`tel:${item.email}`}>{item.email}</a></div>
                                                         </div>
                                                     )
                                                 })

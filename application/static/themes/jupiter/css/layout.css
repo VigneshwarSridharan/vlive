@@ -396,7 +396,7 @@
 
 @media (max-width: 560px) {
 	.card-started {
-		height: 480px;
+		/* height: 480px; */
 	}
 
 	.card-started:after {
