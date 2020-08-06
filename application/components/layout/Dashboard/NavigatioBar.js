@@ -1,11 +1,12 @@
+import { connect } from "react-redux";
 
-const NavigatioBar = () => {
-    let user = window.localStorage.getItem('user');
-    if (user) {
-        user = JSON.parse(user)
-    }
-    let { username = "" } = user || {}
-    console.log(user)
+const NavigatioBar = ({username}) => {
+    // let user = window.localStorage.getItem('user');
+    // if (user) {
+    //     user = JSON.parse(user)
+    // }
+    // let { username = "" } = user || {}
+    // console.log(user)
     return (
         <nav className="navbar navbar-light sticky-top bg-white flex-md-nowrap p-0 shadow">
             <a className="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">
@@ -23,4 +24,8 @@ const NavigatioBar = () => {
     )
 }
 
-export default NavigatioBar
+const mapStateToProps = ({ dashboard }) => ({
+    username: dashboard.username || ''
+})
+
+export default connect(mapStateToProps)(NavigatioBar)

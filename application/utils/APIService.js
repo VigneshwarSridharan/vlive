@@ -6,7 +6,7 @@ const getConfig = () => {
     let config = {};
     let token = "";
 
-    if('localStorage' in window) {
+    if ('localStorage' in window) {
         token = localStorage.getItem('token')
     }
 
@@ -40,8 +40,18 @@ const VirtualCardsService = {
     get: slug => request.get(`/virtual-cards?slug=${slug}`)
 }
 
+const ThemesServices = {
+    list: () => request.get('/themes')
+}
+
+const PlanService = {
+    planDetails: (id) => request.get(`/plans/${id}`)
+}
+
 export {
     request,
     AuthServie,
-    VirtualCardsService
+    VirtualCardsService,
+    ThemesServices,
+    PlanService
 }
